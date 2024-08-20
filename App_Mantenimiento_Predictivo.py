@@ -6,7 +6,7 @@ import pickle
 
 # Configuramos la página de Streamlit
 st.set_page_config(page_title="App de predicción de mantenimiento de maquinas",
-                   page_icon="ahorra-energia.png",
+                   page_icon="assets/ahorra-energia.png",
                    layout="centered",
                    initial_sidebar_state="auto")
 
@@ -25,11 +25,11 @@ Ing. Del Carpio Maraza Heberth E.\n
 """)
 
 from PIL import Image
-image = Image.open("mantenimiento.jpeg")
+image = Image.open("assets/mantenimiento.jpeg")
 st.image(image, caption="App Mantenimiento Predictivo", use_column_width=True)
 
 # Cargamos y mostramos un logo en la barra lateral
-logo = "logo.jpg"
+logo = "assets/logo.jpg"
 st.sidebar.image(logo, width=150)
 # Añadimos un encabezado para la sección de datos del usuario en la barra lateral
 st.sidebar.header('Datos ingresados por el usuario')
@@ -137,7 +137,7 @@ st.subheader('Datos ingresados por el usuario')
 st.write(input_df)
 
 # Cargamos el modelo de clasificación previamente entrenado
-load_clf = pickle.load(open('predictive_maintenance.pkl', 'rb'))
+load_clf = pickle.load(open('assets/predictive_maintenance.pkl', 'rb'))
 
 # Aplicamos el modelo para realizar predicciones en base a los datos ingresados
 prediction = load_clf.predict(input_df)

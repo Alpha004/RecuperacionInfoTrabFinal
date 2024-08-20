@@ -12,7 +12,7 @@ st.set_page_config(
 st.title("Graficas y KPIs")
 col1, col2 = st.columns([2, 2])
 # Leer los datos
-data = pd.read_csv("final_df_labels.csv", low_memory=False, sep=',', encoding='utf-8')
+data = pd.read_csv("./data/final_df_labels.csv", low_memory=False, sep=',', encoding='utf-8')
 
 data['datetime'] = pd.to_datetime(data['datetime'])
 df_failures = data[data['failure'] != 'none']
