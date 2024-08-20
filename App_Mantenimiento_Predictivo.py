@@ -137,7 +137,7 @@ st.subheader('Datos ingresados por el usuario')
 st.write(input_df)
 
 # Cargamos el modelo de clasificación previamente entrenado
-load_clf = pickle.load(open('assets/predictive_maintenance.pkl', 'rb'))
+load_clf = pickle.load(open('data/predictive_maintenance.pkl', 'rb'))
 
 # Aplicamos el modelo para realizar predicciones en base a los datos ingresados
 prediction = load_clf.predict(input_df)
