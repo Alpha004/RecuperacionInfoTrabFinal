@@ -44,10 +44,12 @@ o con conda:
 ```
 
 ### Pasos
-1. Iniciar con la ejecucion del modelo en Jupiter
-2. Al final generara los archivos:
+1. Iniciar con la ejecucion del modelo en Jupiter *Feature_engineering_&_Modeling.py*
+2. Al final generara los 3 archivos necesarios para el dashboard:
+
     ![Archivos generados](assets/archivos_modelo.png)
-3. Colocar el *final_df_labels.csv* y el archivo *predictive_maintenance.pkl* dentro de la carpeta "data"
+
+3. Colocar el *final_df_labels.csv* y el archivo *predictive_maintenance.pkl* dentro de la carpeta "data", el primero sera el dataset transformado y el segundo archivo es el modelo entrenado exportado en archivo .pkl
 4. Ejecutar el comando
 ```bash
     python App_Mantenimiento_Predictivo.py
